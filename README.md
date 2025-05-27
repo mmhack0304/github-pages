@@ -73,4 +73,4 @@ nmap -vv -sV -D 8.8.8.8,20.20.20.20          *permite al usuario enviar paquetes
 nmap -vv -sV -f                              *sirve para fragmentar los paquetes yy que el firewall no lo detecte como un escaneo
 nmap -vv -sV --spoof-mac 81:49:fd:6a:54:09   *sirve para falsificar la direccion MAC del origen del escaneo
 nmap -sS                                     *permite realizar un escaneo SYN sin establecer una conexion completa lo que hace que el firewall no detecte el escaneo
-nmap -vv -sV --max-rate 200 *sirve para controlar la velocidad de los paquetes, muy parecido al -T(0-5).
+nmap -vv -sV --max-rate 200                  *sirve para controlar la velocidad de los paquetes, muy parecido al -T(0-5).
