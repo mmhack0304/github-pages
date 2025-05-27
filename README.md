@@ -74,3 +74,7 @@ nmap -vv -sV -f                              *sirve para fragmentar los paquetes
 nmap -vv -sV --spoof-mac 81:49:fd:6a:54:09   *sirve para falsificar la direccion MAC del origen del escaneo
 nmap -sS                                     *permite realizar un escaneo SYN sin establecer una conexion completa lo que hace que el firewall no detecte el escaneo
 nmap -vv -sV --max-rate 200                  *sirve para controlar la velocidad de los paquetes, muy parecido al -T(0-5).
+
+
+TERCERA FASE
+Explotacion y Cracking
