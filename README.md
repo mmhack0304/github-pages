@@ -63,8 +63,8 @@ nmap -T4   *modo agresivo
 nmap -T5   *modo insane, solo recomendado en entornos controlados
 
 Extras:
-nmap -n   *ignora la resolucion DNS
-nmap -v   *modo verbose, lista la salida a medida que va ejecutando el scan
+nmap -n     *ignora la resolucion DNS
+nmap -v     *modo verbose, lista la salida a medida que va ejecutando el scan
 
 Tecnicas de Evasion de Firewalls con Nmap:
 nmap -vv -sV --mtu 8 (o multiplo de 8)       *ajusta el tamaño de los paquetes enviados para evitar que el firewall los detecte.
@@ -75,6 +75,12 @@ nmap -vv -sV --spoof-mac 81:49:fd:6a:54:09   *sirve para falsificar la direccion
 nmap -sS                                     *permite realizar un escaneo SYN sin establecer una conexion completa lo que hace que el firewall no detecte el escaneo
 nmap -vv -sV --max-rate 200                  *sirve para controlar la velocidad de los paquetes, muy parecido al -T(0-5).
 
+Comandos utiles nmap (scripts):
+nmap -sVC                                            *detectar servicios, versiones y un escaneo de los scripts que tiene el propio nmap para dichas versiones de lo que ha encontrado de cada puerto 
+/usr/share/nmap/scripts                              *La ubicacion de todos los scripts de nmap segun lo que quieras analizar. 
+ls -lah | grep smb                                   *para filtrar dentro de la ubicacion donde se encuentras los scripts
+nmap -vv -p443 -sV --script smb-vuln-ms17-010 (ip)   *Para lanzar el scrip y saber si esta version es vulnerable a dicha vulnerabilidad. 
 
 TERCERA FASE
 Explotacion y Cracking
+
